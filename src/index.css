@@ -16,28 +16,29 @@ body{
     margin-left: 50px;
     margin-right: 50px;
 }
-.movie-container{
+.movie_container{
     background-color: rgba(85, 85, 148, 0.956);
     margin: 10px;
-    width: 200px;
-    height: 360px;
+    width: 230px;
+    height: 400px;
+    
 }
 
 .movie_section{
     display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 360px;
+    width: 230px;
+    height: 400px;
 }
 
 .poster{
-    width: 200px;
-    height: 300px;
+    width: 230px;
+    height: 340px;
 }
 .text_section{
     display: flex;
     flex-direction: row;
-    width: 200px;
+    width: 230px;
     height: 60px;
     justify-content: center;
     align-items: center;
@@ -45,14 +46,51 @@ body{
 
 .title{
     display: flex;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: bold;
     color: white;
-    width: 145px;
+    width: 160px;
 }
 
 .vote_average{
     display: flex;
     justify-content: flex-end;
+    font-size: 15px;
+    color: white;
+}
+
+.des_section{
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    height: 400px;
+}
+
+.des-container{
+    background-color: black;
+    width: 230px;
+    height: 400px;
+    opacity: 0.7;
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.des_title{
     font-size: 14px;
     color: white;
+    font-weight: bold;
+    width: 200px;
+    height: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+}
+
+.overview{
+    font-size: 14px;
+    color: white;
+    margin-left: 15px;
+    margin-right: 12px;
+    margin-top: 5px;
 }
