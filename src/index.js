@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM  from 'react-dom';// react v17버전용
-import './index.css';
+import './Components/Movie/Movie.style';
 import App from './App';
 
 ReactDOM.render(

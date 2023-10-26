@@ -1,41 +1,18 @@
-import React, { useEffect } from 'react';
-import Movie from './Components/Movie';
+import React from 'react';
+import Movie from './Components/Movie/Movie';
 import movies from './movieDummy';
+import { App_container, Movie_container } from './Components/Movie/Movie.style';
 
 function App() {
-  useEffect(() => {
-    const movieContainers = document.querySelectorAll('.movie-container');
-    const desContainers = document.querySelectorAll('.des-container');
-
-    movieContainers.forEach((movieContainer, index) => {
-      movieContainer.addEventListener('mouseenter', () => {
-        desContainers[index].style.display = 'block';
-      });
-
-      movieContainer.addEventListener('mouseleave', () => {
-        desContainers[index].style.display = 'none';
-      });
-
-      // 마우스를 떠날 때 이벤트 리스너를 정리합니다.
-      return () => {
-        movieContainer.removeEventListener('mouseenter', () => {
-          desContainers[index].style.display = 'block';
-        });
-        movieContainer.removeEventListener('mouseleave', () => {
-          desContainers[index].style.display = 'none';
-        });
-      };
-    });
-  }, []); // 빈 배열을 전달하여 이펙트가 컴포넌트가 마운트될 때만 실행되도록 합니다.
-
+  
   return (
-    <div className="app-container">
+    <App_container>
       {movies.results.map((item, index) => (
-        <div key={item.id} className="movie-container">
+        <Movie_container key={item.id}>
           <Movie title={item.title} poster={item.poster_path} vote_average={item.vote_average} overview={item.overview} />
-        </div>
+        </Movie_container>
       ))}
-    </div>
+    </App_container>
   );
 }
 
